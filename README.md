@@ -1,2 +1,2 @@
 # DecisionTournament
- Tournament style battle to make decisions for you
+ A tournament style battle to make decisions for you.
