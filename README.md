@@ -1,4 +1,6 @@
 # DecisionTournament
- A tournament style battle to make decisions for you.
+Get medieval on your indecisiveness!
 
-https://sebirlinem.github.io/DecisionTournament/
+Try it here: https://sebirlinem.github.io/DecisionTournament/
+
+Also available and an Android app: https://github.com/Sebirlinem/DecisionTournamentApp/releases/tag/v0.2.0-Beta
