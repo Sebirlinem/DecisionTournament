@@ -1,0 +1,231 @@
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {	margin: 0;	padding: 0;	border: 0;	font-size: 100%;	font: inherit;	vertical-align: baseline;}/* HTML5 display-role reset for older browsers */article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	display: block;}body {	line-height: 1;}ol, ul {	list-style: none;}blockquote, q {	quotes: none;}blockquote:before, blockquote:after,q:before, q:after {	content: '';	content: none;}table {	border-collapse: collapse;	border-spacing: 0;}p {line-height:1.5;margin-bottom:18px;color:#333;}.muted {color:#666;}h1, h2, h3, h4, h5, h6 {line-height:1.1;color:#000;}
+
+* { Box-sizing: Border-box }
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin: 0 auto 0 auto;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0 auto 0 auto;
+}
+
+h1 {
+	font-size: 10vmin;
+	text-align: center;
+	font-family: 'Prince Valiant';
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 1.2em;
+}
+
+p {
+	font-size: 3vmin;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+div {
+	text-align: center;
+	margin-top: 20px;
+}
+
+input {
+	font-size: 3vmin;
+	width: 50%;
+	max-width: 636px;
+	margin: 10px 20px 10px 0;
+	border-width: 0;
+}
+
+button {
+	font-size: 4vmin;
+}
+
+*:focus {
+    outline: none;
+}
+
+@font-face {
+	font-family: 'Prince Valiant';
+	src: url('PrinceValiant.ttf');
+}
+
+#menu {
+	text-align: center;
+	padding: 30px 0 0 0;
+	margin: 0;
+	position: static;
+}
+
+#menu img, #datBase img {
+	display: none;
+}
+
+#debug_log {
+	text-align: left;
+	max-height: 80px;
+	overflow-y: scroll;
+	display: none;
+}
+
+#debug_log p {
+	margin: 0;
+	font-size: 0.5em;
+	color: red;
+}
+
+#theme {
+	height: 30px;
+	width: 30px;
+	border-width: 0;
+	background-image: url('view.png');
+	background-size: contain;
+	padding: 0;
+}
+
+#links {
+	height: 30px;
+	width: 30px;
+	border-width: 0;
+	background-image: url('link.png');
+	background-size: contain;
+	padding: 0;
+}
+
+#info {
+	height: 30px;
+	width: 30px;
+	border-width: 0;
+	background-image: url('info.png');
+	background-size: contain;
+	padding: 0;
+	margin: 0 10vmin 0 10vmin;
+}
+
+#unPop {
+	height: 30px;
+	width: 30px;
+	border-width: 0;
+	padding: 0;
+}
+
+#popWrap {
+	position: fixed;
+	top: 200px;
+	z-index: 9;
+	height: 100%;
+	width: 100%;
+	max-width: 575px;
+}
+
+#popper {
+	width: 80%;
+	margin: auto;
+	padding: 20px;
+	text-align: right;
+}
+
+#popper div {
+	text-align: left;
+}
+
+#git {
+	height: 32px;
+	width: 32px;
+	border-width: 0;
+	background-image: url('Mark.png');
+	background-size: contain;
+	padding: 0;
+	margin-right: 10px;
+}
+
+#kofi {
+	height: 32px;
+	width: 32px;
+	border-width: 0;
+	background-image: url('Kofi.png');
+	background-size: contain;
+	padding: 0;
+	margin-right: 10px;
+}
+
+#linkList, #infoView {
+	font-weight: bold;
+}
+
+#linkList li a {
+	margin-bottom: 20px;
+	display:flex;
+	align-items:center;
+}
+
+.nav {
+	display: inline-block;
+}
+
+.entrantList {
+	margin: 0;
+}
+
+.mod {
+	padding: 0px 5px 2px 5px;
+}
+
+#addNew {
+	padding: 1px 5px 1px 5px;
+}
+
+#layOn, #rinseRepeat {
+	font-family: 'Prince Valiant';
+	font-size: 6vw;
+	padding: 5px 10px 5px 10px;
+	margin: 20px 0 20px 0;
+}
+
+#progress {
+	margin: 10px auto 20px auto;
+	width: 90%;
+	max-width: 700px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: black;
+	padding: 5px 8px 3px 8px;
+	text-align: left;
+	min-height: 550px;
+}
+#progress p {
+	margin: 0;
+	padding: 0;
+}
+
+@media screen and (min-width: 575px) {
+
+	body {
+		max-width: 575px;
+	}
+
+	h1 {
+		font-size: 3.5em;
+	}
+
+	p, input {
+		font-size: 1em;
+	}
+
+	button, #layOn, #rinseRepeat {
+		font-size: 2em;
+	}
+
+}

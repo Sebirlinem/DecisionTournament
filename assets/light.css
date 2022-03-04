@@ -1,0 +1,22 @@
+body {
+	background-color: rgb(240, 240, 240);
+}
+
+input {
+	background-color: rgb(255, 255, 255);
+}
+
+#theme, #info, #links {
+	background-color: rgba(0,0,0,0);
+}
+
+#popper {
+	background-color: white;
+	border-color: black;
+	border-width: 1px;
+	border-style: solid;
+}
+
+#unPop, #git, #kofi {
+	background-color: white;
+}

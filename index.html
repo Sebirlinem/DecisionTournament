@@ -1,30 +1,92 @@
 <!DOCTYPE html>
-<html lang="en-AU">
-	<head>
-		<title>Decision Tournament</title>
-		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-		<script type="text/javascript" src="script.js"></script>
-		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-		<link href='style.css' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
+<html>
+
+<head>
+	<title>Decision Tournament</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+	<link href='assets/style.css' rel='stylesheet' type='text/css'>
+
+	<link href='assets/medieval.css' rel='stylesheet' type='text/css' id="theme_css">
+
+<!-- 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script type="text/javascript" src="../node_modules/androidjs/lib/androidjs.js"></script> -->
+</head>
+
+<body>
+	<div id="menu">
+		<button id="theme" class="nav"></button>
+		<button id="info" class="nav"></button>
+		<button id="links" class="nav"></button>
+		<img src="assets/scrollTop.png">
+	</div>
+	<div id="middle">
 		<div id="head">
 			<h1>Decision Tournament</h1>
-			<p>Enter your list of options and watch them fight to the death to decide the ultimate victor.</p>
-			<p style="font-style: italic;">When entering your options place ', ' between each one, e.g. "Red, Blue, Yellow".</p>
+		</div>
 
-			<label for="combatants">Options:</label>
-			<input type="text" name="combatants" id="combatants">
+		<div id="entries">
+			<p>Enter your list of options and watch them fight to the death to decide the ultimate victor.</p>
+
+			<div id="entrants">
+				<div id="row_0" class="entrantList">
+					<input type="text" name="combatant_0" id="combatant_0">
+					<button id="remove_0" class="mod">x</button>
+				</div>
+				<div id="row_1" class="entrantList">
+					<input type="text" name="combatant_1" id="combatant_1">
+					<button id="remove_1" class="mod">x</button>
+				</div>
+				<div id="row_2" class="entrantList">
+					<input type="text" name="combatant_2" id="combatant_2">
+					<button id="remove_2" class="mod">x</button>
+				</div>
+			</div>
+			<button id="addNew">+</button>
 			<br>
 			<button id="layOn">Fight!</button>
 		</div>
-		<hr>
-		<div id="herald">
+
+		<div id="herald" style="display: none;">
 			<h2 id="status" style="color: white;">Status:</h2>
 			<div id="progress"></div>
+			<button id="rinseRepeat">New Tournament</button>
 		</div>
-		<script type="text/javascript">
-			
-		</script>
-	</body>
+	</div>
+
+	<div id="datBase">
+		<img src="assets/scrollBottom.png">
+		<div id="debug_log"></div>
+	</div>
+
+	<div id="popWrap" style="display:none;">
+		<div id="popper">
+			<button id="unPop">X</button>
+			<div id="linkView" style="display:none;">
+				<ul id="linkList">
+					<li><a href="https://github.com/Sebirlinem/DecisionTournamentApp/issues" target="_blank"><button id="git"></button>Bugs / Feedback</a></li>
+					<li><a href="https://ko-fi.com/descisiontournament" target="_blank"><button id="kofi"></button>Support the Dev on Ko-fi</a></li>
+				</ul>
+			</div>
+			<div id="infoView" style="display:none">
+				<p>Enter each of your options in the boxes provided, one per box.</p>
+				<p>If you would like to quickly remove an option then press the X button to the right of that text box.</p>
+				<p>If you would like to add even more options press the + button at the bottom of the options list.</p>
+				<p>To begin the descision tournament press the 'Fight!' button.</p>
+			</div>
+		</div>
+	</div>
+
+<script src="assets/jquery-3.3.1.slim.min.js"></script>
+<script type="text/javascript" src = "assets/script.js"></script>
+<script type="text/javascript">
+	function toggle_popover() {
+		$('#popover').popover('toggle')
+	}
+</script>
+</body>
+
 </html>

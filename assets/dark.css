@@ -1,0 +1,48 @@
+body, button {
+	background-color: rgb(10,10,10);
+}
+
+input {
+	background-color: rgb(55,55,55);
+}
+
+h1, p, input, button {
+	color: rgb(100,100,100);
+}
+
+p, input {
+	font-weight: 700;
+}
+
+#theme {
+	background-image: url('view2.png');
+	background-color: rgba(0,0,0,0);
+	opacity: 50%;
+}
+
+#links {
+	background-image: url('link2.png');
+	background-color: rgba(0,0,0,0);
+	opacity: 50%;
+}
+
+#info {
+	background-image: url('info2.png');
+	background-color: rgba(0,0,0,0);
+	opacity: 50%;
+}
+
+#git {
+	background-image: url('Mark2.png');
+}
+
+#linkList {
+	color: rgb(100,100,100);
+}
+
+#popper {
+	background-color: black;
+	border-color: rgb(55,55,55);
+	border-width: 1px;
+	border-style: solid;
+}
